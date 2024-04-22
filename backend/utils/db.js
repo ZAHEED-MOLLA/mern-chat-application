@@ -1,8 +1,11 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
-// const URI = process.env.MONGODB_URI;
+dotenv.config();
 
-const URI = "mongodb://127.0.0.1:27017/chatApp";
+const URI = process.env.MONGODB_URI;
+
+// const URI = "mongodb://127.0.0.1:27017/chatApp";
 
 const connectDB = async()=>{
     try {
